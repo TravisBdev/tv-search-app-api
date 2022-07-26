@@ -15,6 +15,7 @@ form.addEventListener('submit', async (e) => {
     input.value = "";
     const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${movieChoice}`)
     makeImg(response.data);
+    console.log(response.data);
   } catch (e) {
     console.log('Uh oh.. Something Went Wrong.', e);
   }
@@ -26,7 +27,7 @@ const makeImg = (shows) => {
     if(result.show.image){
       const img = document.createElement('img');
       img.src = result.show.image.medium;
-      img.setAttribute('class', 'imgs')
+      img.setAttribute('id', 'imgs')
       imgHolder.append(img);
     }
   })
@@ -43,6 +44,8 @@ const reset = () => {
 // helper handlers for resetting
 input.addEventListener('input', reset);
 clear.addEventListener('click', reset);
+
+
 
 
 

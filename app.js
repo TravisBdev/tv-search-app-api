@@ -15,7 +15,6 @@ form.addEventListener('submit', async (e) => {
     input.value = "";
     const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${movieChoice}`)
     makeImg(response.data);
-    console.log(response.data);
   } catch (e) {
     console.log('Uh oh.. Something Went Wrong.', e);
   }

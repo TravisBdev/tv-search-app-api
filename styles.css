@@ -51,13 +51,13 @@ body {
   border: 2px solid #f804f8ea;
 }
 
-.imgs {
+#imgs {
   margin: .8em .5em;
   border-radius: 10px;
   transition: 0.3s;
 }
 
-.imgs:hover {
+#imgs:hover {
   transform: translate(0, -8px);
   box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.7);
 }

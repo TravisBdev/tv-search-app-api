@@ -46,6 +46,3 @@ clear.addEventListener('click', reset);
 
 
 
-
-
-

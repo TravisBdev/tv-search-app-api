@@ -10,10 +10,14 @@ const clear = document.querySelector('.reset')
 // Main event listener - gets data then passes it to makeImg() to append to container
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const movieChoice = input.value;
-  input.value = "";
-  const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${movieChoice}`)
-  makeImg(response.data);
+  try {
+    const movieChoice = input.value;
+    input.value = "";
+    const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${movieChoice}`)
+    makeImg(response.data);
+  } catch (e) {
+    console.log('Uh oh.. Something Went Wrong.', e);
+  }
 })
 
 // creates image and appends it to the page

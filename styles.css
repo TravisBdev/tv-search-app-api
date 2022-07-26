@@ -6,10 +6,30 @@
 
 
 body {
-  background-color: grey;
+  background-color: #292828;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submit, .reset {
+  border: none;
+  border-radius: 8px;
+  background-color: #7a7979;
+  color: white;
+  padding: 1px;
+  margin: .3em;
+  width: 7em;
+}
+
+.title {
+  color: #dbdfdee3;
 }
 
 .image-holder {
@@ -19,9 +39,25 @@ body {
 }
 
 .input {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  background-color: #7a7979;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.input:focus {
+  outline: none !important;
+  border: 2px solid #f804f8ea;
 }
 
 .imgs {
-  margin-bottom: 1em;
+  margin: .8em .5em;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.imgs:hover {
+  transform: translate(0, -8px);
+  box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.7);
 }

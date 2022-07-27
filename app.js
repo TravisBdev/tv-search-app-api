@@ -1,4 +1,3 @@
-
 // global selectors
 const submitBtn = document.querySelector('.submit');
 const imgHolder = document.querySelector('.image-holder');
@@ -26,7 +25,7 @@ const makeImg = (shows) => {
     if(result.show.image){
       const img = document.createElement('img');
       img.src = result.show.image.medium;
-      img.setAttribute('id', 'imgs')
+      img.setAttribute('class', 'imgs')
       imgHolder.append(img);
     }
   })
@@ -43,6 +42,3 @@ const reset = () => {
 // helper handlers for resetting
 input.addEventListener('input', reset);
 clear.addEventListener('click', reset);
-
-
-
